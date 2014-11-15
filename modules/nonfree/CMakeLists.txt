@@ -1,4 +1,4 @@
-if(BUILD_ANDROID_PACKAGE)
+if(BUILD_ANDROID_PACKAGE OR WINRT)
   ocv_module_disable(nonfree)
 endif()
 
