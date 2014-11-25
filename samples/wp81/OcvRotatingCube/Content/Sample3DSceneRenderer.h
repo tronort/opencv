@@ -4,6 +4,9 @@
 #include "ShaderStructures.h"
 #include "..\Common\StepTimer.h"
 
+//MAX
+#include <mutex>
+
 namespace OcvRotatingCube
 {
 	// This sample renderer instantiates a basic rendering pipeline.
@@ -21,6 +24,9 @@ namespace OcvRotatingCube
 		void StopTracking();
 		bool IsTracking() { return m_tracking; }
 
+		//MAX
+		void CreateTextureFromByte(byte  *  buffer, int width, int height);
+
 	private:
 		void Rotate(float radians);
 
@@ -35,6 +41,14 @@ namespace OcvRotatingCube
 		Microsoft::WRL::ComPtr<ID3D11VertexShader>	m_vertexShader;
 		Microsoft::WRL::ComPtr<ID3D11PixelShader>	m_pixelShader;
 		Microsoft::WRL::ComPtr<ID3D11Buffer>		m_constantBuffer;
+
+		//MAX
+		Microsoft::WRL::ComPtr<ID3D11Texture2D>		 m_texture;
+		Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> m_SRV;
+		Microsoft::WRL::ComPtr<ID3D11SamplerState> m_cubesTexSamplerState;
+		Microsoft::WRL::ComPtr<ID3D11BlendState> m_transparency;
+		Microsoft::WRL::ComPtr<ID3D11RasterizerState> m_CCWcullMode;
+		Microsoft::WRL::ComPtr<ID3D11RasterizerState> m_CWcullMode;
 
 		// System resources for cube geometry.
 		ModelViewProjectionConstantBuffer	m_constantBufferData;

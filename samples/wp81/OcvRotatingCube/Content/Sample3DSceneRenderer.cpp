@@ -20,6 +20,67 @@ Sample3DSceneRenderer::Sample3DSceneRenderer(const std::shared_ptr<DX::DeviceRes
 	CreateWindowSizeDependentResources();
 }
 
+void Sample3DSceneRenderer::CreateTextureFromByte(byte* buffer, int width, int height)
+{
+	int pixelSize = 4;
+
+	if (m_texture.Get() == nullptr)
+	{
+		CD3D11_TEXTURE2D_DESC textureDesc(
+			DXGI_FORMAT_B8G8R8A8_UNORM,		// format
+			static_cast<UINT>(width),		// width
+			static_cast<UINT>(height),		// height
+			1,								// arraySize
+			1,								// mipLevels 
+			D3D11_BIND_SHADER_RESOURCE,		// bindFlags
+			D3D11_USAGE_DYNAMIC,			// usage
+			D3D11_CPU_ACCESS_WRITE,			// cpuaccessFlags
+			1,								// sampleCount
+			0,								// sampleQuality
+			0								// miscFlags
+			);
+
+		D3D11_SUBRESOURCE_DATA data;
+		data.pSysMem = buffer;
+		data.SysMemPitch = pixelSize*width;
+		data.SysMemSlicePitch = pixelSize*width*height;
+
+		DX::ThrowIfFailed(
+			m_deviceResources->GetD3DDevice()->CreateTexture2D(
+			&textureDesc,
+			&data,
+			m_texture.ReleaseAndGetAddressOf()
+			)
+			);
+
+		m_deviceResources->GetD3DDevice()->CreateShaderResourceView(m_texture.Get(), NULL, m_SRV.ReleaseAndGetAddressOf());
+		D3D11_SAMPLER_DESC sampDesc;
+		ZeroMemory(&sampDesc, sizeof(sampDesc));
+		sampDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;
+		sampDesc.AddressU = D3D11_TEXTURE_ADDRESS_WRAP;
+		sampDesc.AddressV = D3D11_TEXTURE_ADDRESS_WRAP;
+		sampDesc.AddressW = D3D11_TEXTURE_ADDRESS_WRAP;
+		sampDesc.ComparisonFunc = D3D11_COMPARISON_NEVER;
+		sampDesc.MinLOD = 0;
+		sampDesc.MaxLOD = D3D11_FLOAT32_MAX;
+		m_deviceResources->GetD3DDevice()->CreateSamplerState(&sampDesc, m_cubesTexSamplerState.ReleaseAndGetAddressOf());
+	}
+	else
+	{
+		int nRowSpan = width * pixelSize;
+		D3D11_MAPPED_SUBRESOURCE mappedResource;
+		HRESULT hr = m_deviceResources->GetD3DDeviceContext()->Map(m_texture.Get(), 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
+		BYTE* mappedData = static_cast<BYTE*>(mappedResource.pData);
+
+		for (int i = 0; i < height; ++i)
+		{
+			memcpy(mappedData + (i*mappedResource.RowPitch), buffer + (i*nRowSpan), nRowSpan);
+		}
+
+		m_deviceResources->GetD3DDeviceContext()->Unmap(m_texture.Get(), 0);
+	}
+}
+
 // Initializes view parameters when the window size changes.
 void Sample3DSceneRenderer::CreateWindowSizeDependentResources()
 {
