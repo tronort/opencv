@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="..\..\..\modules\ml\src\ann_mlp.cpp">
       <Filter>Src</Filter>
@@ -75,22 +75,22 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{5A2FE3E6-5038-47EF-888F-B9042F531F5D}</UniqueIdentifier>
+      <UniqueIdentifier>{B1DAEB1E-4081-49E4-BBFC-1291D4AE0336}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{0CF67FDD-3F4B-4BF9-AECB-25BEA5CB5810}</UniqueIdentifier>
+      <UniqueIdentifier>{26BBB2E3-7FA0-4B29-B7A7-EDDAB8D19605}</UniqueIdentifier>
     </Filter>
     <Filter Include="Src">
-      <UniqueIdentifier>{77DE41D6-46C7-4D22-9EAD-4C65A21738C5}</UniqueIdentifier>
+      <UniqueIdentifier>{7DFD73F2-56FC-465F-A9D5-757E9F5FF16C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Include">
-      <UniqueIdentifier>{270EF06C-457D-487D-89F9-6B9131DD44E8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Include\opencv2">
-      <UniqueIdentifier>{F3E23CA5-39A5-47C2-8583-DAD526ACBC40}</UniqueIdentifier>
+      <UniqueIdentifier>{288B4306-C182-4AFC-8B66-8B3CB7C03EC4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Include\opencv2\ml">
-      <UniqueIdentifier>{C3B30F45-1F14-4766-BFF1-9A9AD14BE27A}</UniqueIdentifier>
+      <UniqueIdentifier>{BC56BDCF-FDE3-484A-BB94-BFF12FB7B89C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{614588E1-A0AE-4D49-91ED-98F1E1CC9172}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
