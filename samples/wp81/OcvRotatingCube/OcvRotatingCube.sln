@@ -5,6 +5,16 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OcvRotatingCube", "OcvRotatingCube.vcxproj", "{46D47B9F-322B-4437-80CD-558EED264677}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opencv_core", "..\..\..\binWP8_1\modules\core\opencv_core.vcxproj", "{400AF456-D2AE-4A9C-820F-CE2A09F60AE9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opencv_features2d", "..\..\..\binWP8_1\modules\features2d\opencv_features2d.vcxproj", "{A130F553-1CC7-4C24-ACE9-390E39DF7EF5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opencv_flann", "..\..\..\binWP8_1\modules\flann\opencv_flann.vcxproj", "{4E136024-D8B7-4378-9D16-F1B94C905CB4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opencv_imgproc", "..\..\..\binWP8_1\modules\imgproc\opencv_imgproc.vcxproj", "{3DA609BA-E1DC-4101-AE86-DA3078324C7B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\..\..\binWP8_1\3rdparty\zlib\zlib.vcxproj", "{BEE8FCC8-FB6E-41CD-94BD-67870862EC65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -25,6 +35,36 @@ Global
 		{46D47B9F-322B-4437-80CD-558EED264677}.Release|Win32.ActiveCfg = Release|Win32
 		{46D47B9F-322B-4437-80CD-558EED264677}.Release|Win32.Build.0 = Release|Win32
 		{46D47B9F-322B-4437-80CD-558EED264677}.Release|Win32.Deploy.0 = Release|Win32
+		{400AF456-D2AE-4A9C-820F-CE2A09F60AE9}.Debug|ARM.ActiveCfg = Debug|Win32
+		{400AF456-D2AE-4A9C-820F-CE2A09F60AE9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{400AF456-D2AE-4A9C-820F-CE2A09F60AE9}.Debug|Win32.Build.0 = Debug|Win32
+		{400AF456-D2AE-4A9C-820F-CE2A09F60AE9}.Release|ARM.ActiveCfg = Release|Win32
+		{400AF456-D2AE-4A9C-820F-CE2A09F60AE9}.Release|Win32.ActiveCfg = Release|Win32
+		{400AF456-D2AE-4A9C-820F-CE2A09F60AE9}.Release|Win32.Build.0 = Release|Win32
+		{A130F553-1CC7-4C24-ACE9-390E39DF7EF5}.Debug|ARM.ActiveCfg = Debug|Win32
+		{A130F553-1CC7-4C24-ACE9-390E39DF7EF5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A130F553-1CC7-4C24-ACE9-390E39DF7EF5}.Debug|Win32.Build.0 = Debug|Win32
+		{A130F553-1CC7-4C24-ACE9-390E39DF7EF5}.Release|ARM.ActiveCfg = Release|Win32
+		{A130F553-1CC7-4C24-ACE9-390E39DF7EF5}.Release|Win32.ActiveCfg = Release|Win32
+		{A130F553-1CC7-4C24-ACE9-390E39DF7EF5}.Release|Win32.Build.0 = Release|Win32
+		{4E136024-D8B7-4378-9D16-F1B94C905CB4}.Debug|ARM.ActiveCfg = Debug|Win32
+		{4E136024-D8B7-4378-9D16-F1B94C905CB4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4E136024-D8B7-4378-9D16-F1B94C905CB4}.Debug|Win32.Build.0 = Debug|Win32
+		{4E136024-D8B7-4378-9D16-F1B94C905CB4}.Release|ARM.ActiveCfg = Release|Win32
+		{4E136024-D8B7-4378-9D16-F1B94C905CB4}.Release|Win32.ActiveCfg = Release|Win32
+		{4E136024-D8B7-4378-9D16-F1B94C905CB4}.Release|Win32.Build.0 = Release|Win32
+		{3DA609BA-E1DC-4101-AE86-DA3078324C7B}.Debug|ARM.ActiveCfg = Debug|Win32
+		{3DA609BA-E1DC-4101-AE86-DA3078324C7B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3DA609BA-E1DC-4101-AE86-DA3078324C7B}.Debug|Win32.Build.0 = Debug|Win32
+		{3DA609BA-E1DC-4101-AE86-DA3078324C7B}.Release|ARM.ActiveCfg = Release|Win32
+		{3DA609BA-E1DC-4101-AE86-DA3078324C7B}.Release|Win32.ActiveCfg = Release|Win32
+		{3DA609BA-E1DC-4101-AE86-DA3078324C7B}.Release|Win32.Build.0 = Release|Win32
+		{BEE8FCC8-FB6E-41CD-94BD-67870862EC65}.Debug|ARM.ActiveCfg = Debug|Win32
+		{BEE8FCC8-FB6E-41CD-94BD-67870862EC65}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BEE8FCC8-FB6E-41CD-94BD-67870862EC65}.Debug|Win32.Build.0 = Debug|Win32
+		{BEE8FCC8-FB6E-41CD-94BD-67870862EC65}.Release|ARM.ActiveCfg = Release|Win32
+		{BEE8FCC8-FB6E-41CD-94BD-67870862EC65}.Release|Win32.ActiveCfg = Release|Win32
+		{BEE8FCC8-FB6E-41CD-94BD-67870862EC65}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

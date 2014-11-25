@@ -154,6 +154,20 @@
       <SubType>Designer</SubType>
     </AppxManifest>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\binWP8_1\modules\core\opencv_core.vcxproj">
+      <Project>{400af456-d2ae-4a9c-820f-ce2a09f60ae9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\binWP8_1\modules\features2d\opencv_features2d.vcxproj">
+      <Project>{a130f553-1cc7-4c24-ace9-390e39df7ef5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\binWP8_1\modules\flann\opencv_flann.vcxproj">
+      <Project>{4e136024-d8b7-4378-9d16-f1b94c905cb4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\binWP8_1\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{3da609ba-e1dc-4101-ae86-da3078324c7b}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ImageContentTask.targets" />
