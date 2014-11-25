@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>2c0d2fd5-74d3-4c2a-891d-15a0f0ec3dde</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>3c4ed2bf-bbdc-4f78-b299-c7da5deb5a4e</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>46d47b9f-322b-4437-80cd-558eed264677</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)OcvRotatingCubeMain.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\DirectXHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Content\Sample3DSceneRenderer.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="DirectXPage.xaml.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)OcvRotatingCubeMain.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Content\Sample3DSceneRenderer.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="DirectXPage.xaml.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Content\SamplePixelShader.hlsl">
+      <Filter>Content</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Content\SampleVertexShader.hlsl">
+      <Filter>Content</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{f0a9a78a-b006-4c27-9758-0ab62d9e0d23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>{92512dbb-44ab-40e5-8915-d1303a2f5b18}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Logo.scale-240.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.scale-240.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-240.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square71x71Logo.scale-240.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-240.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\WideLogo.scale-240.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DirectXPage.xaml" />
+  </ItemGroup>
+</Project>
