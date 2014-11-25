@@ -65,6 +65,12 @@
     <CustomBuild Include="..\..\..\modules\shape\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{614588E1-A0AE-4D49-91ED-98F1E1CC9172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\shape">
+      <UniqueIdentifier>{0EF635AC-22A6-4F5E-9A2D-86B0F8FFE9E8}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{B1DAEB1E-4081-49E4-BBFC-1291D4AE0336}</UniqueIdentifier>
     </Filter>
@@ -76,12 +82,6 @@
     </Filter>
     <Filter Include="Include">
       <UniqueIdentifier>{288B4306-C182-4AFC-8B66-8B3CB7C03EC4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Include\opencv2">
-      <UniqueIdentifier>{614588E1-A0AE-4D49-91ED-98F1E1CC9172}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Include\opencv2\shape">
-      <UniqueIdentifier>{0EF635AC-22A6-4F5E-9A2D-86B0F8FFE9E8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
