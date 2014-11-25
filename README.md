@@ -1,34 +1,32 @@
 ### OpenCV: Open Source Computer Vision Library
 
-####How to build OpenCV for WinRT
-1. open the binWinRT folder
+####How to build OpenCV for Windows Phone 8.1
+1. open the binWP8_1 folder
 2. build the opencv.sln using VS2013
 
-####How to build OpenCV for Windows Phone 8.0
-1. open the binWP8 folder
-2. build the opencv.sln using VS2012 or VS2013
+####How to setup CMake GUI to build the WindowsPhone and WindowsStore Projects
 
-
-
-####How to setup CMake GUI to build the WinRT Projects
-
-Since CMake cannot create WinRT project files directly, the following procedure is required if you want to make changes to the opencv projects using CMake options. The basic procedure is:
+CMake 3.1 [can now create](http://blogs.msdn.com/b/uk_faculty_connection/archive/2014/07/29/cmake-for-windows-store-and-windows-phone-apps.aspx) Windows Store and Windows Phone project files directly. The following few steps are now required to build OpenCV for these platforms:
 
 * Set up CMake with the correct parameters
-* Configure, Generate and Build Win32 projects
-* Set up CMake for WinRT
-* Configure and Generate WinRT project files
-* Build WinRT projects
+* Configure, Generate and Build projects
 
-#####1. Open CMake gui
+#####1. Open [CMake GUI](http://www.cmake.org/download/)
 
 #####2. Set the build paths
 * Where is the source code: path to opencv
-* Where to build the binaries: path to opencv/bin
+* Where to build the binaries: path to ```opencv/<your-custom-folder>```, usually ```opencv/bin```
 
-#####3. Select ONLY the following Options
+#####3. BEFORE going to "Configure" use "Add Entry" button to add the following parameters:
+Note that a single platform can be configured at a time. To build for different platform go through these steps and set values for another platform at this step.
+- WinowsPhone
+ - ```CMAKE_SYSTEM_NAME``` - ```WindowsPhone```
+ - ```CMAKE_SYSTEM_VERSION``` - ```8.1``` or ```8.0```
+- Winows Store
+ - ```CMAKE_SYSTEM_NAME``` - ```WindowsStore```
+ - ```CMAKE_SYSTEM_VERSION``` - ```8.1```
 
-######Note: Make sure the ```ENABLE_WINRT_MODE```	option is off. This step builds for Win32.
+#####4. Select ONLY the following Options
 
 * BUILD_JASPER
 * BUILD_JPEG
@@ -39,12 +37,10 @@ Since CMake cannot create WinRT project files directly, the following procedure 
 * BUILD_WITH_STATIC_CRT
 * BUILD_ZLIB
 * BUILD_opencv_calib3d
-* BUILD_opencv_contrib
 * BUILD_opencv_core
 * BUILD_opencv_features2d
 * BUILD_opencv_flann
 * BUILD_opencv_imgproc
-* BUILD_opencv_legacy
 * BUILD_opencv_ml
 * BUILD_opencv_objdetect
 * BUILD_opencv_photo
@@ -54,36 +50,16 @@ Since CMake cannot create WinRT project files directly, the following procedure 
 * BUILD_opencv_videostab
 * ENABLE_PRECOMPILED_HEADERS
 * ENABLE_SOLUTION_FOLDERS
-* ENABLE_SSE
-* ENABLE_SSE2
 * WITH_JASPER
 * WITH_JPEG
 * WITH_PNG
 * WITH_TIFF
 * WITH_VFW
 
-#####4. Click on Configure
-#####5. Click on Generate
+#####5. Click on "Configure"
+#####6. Click on "Generate"
 
-This will generate all of the files needed to build the Win32 open_cv projects in ```opencv\bin```. Open the ```opencv\bin``` directory and open the ```OpenCV.sln```. Build all of the projects. They should build without errors.
-
-#####6. Return to Cmake Gui and enable the following option:
-
-* ENABLE_WINRT_MODE	// Make sure this option is on
-* Click on Configure
-* Click on Generate
-
-This will generate all of the files needed to build the open_cv projects in opencv\binWinRT
-
-#####7. Open the ```opencv\binWinRT``` directory and run the ```convertprojects.ps1``` script. The script will create the WinRT projects in the ```opencv\binWinRT``` directory. The WP8 projects will be in ```opencv\binWP8```.
-
-
-* open the binWinRT folder
-* build the opencv.sln using VS2013
-
-
-* open the binWP8 folder
-* build the opencv.sln using VS2012 or VS2013
+This will generate all of the files needed to build open_cv projects for selected platform in ```opencv\bin```. Open the ```opencv\bin``` directory and open the ```OpenCV.sln```. Build all of the projects. They should build without errors.
 
 #### Resources
 
