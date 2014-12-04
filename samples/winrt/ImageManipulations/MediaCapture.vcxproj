@@ -97,12 +97,15 @@
     <PackageCertificateThumbprint>76D64E4F88C9B7D47ACA757CDFD15D6F3AD81D92</PackageCertificateThumbprint>
     <PackageCertificateKeyFile>MediaCapture_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>..\..\..\binWinRT\bin\Debug;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">..\..\..\..\include;..\..\..\..\modules\core\include;..\..\..\..\modules\imgproc\include;..\..\..\..\modules\features2d\include;..\..\..\..\modules\flann\include;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">..\..\..\..\include;..\..\..\..\modules\core\include;..\..\..\..\modules\imgproc\include;..\..\..\..\modules\features2d\include;..\..\..\..\modules\flann\include;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\include;C:\Users\dalestam\Documents\GitHub\opencv-pr\modules\core\include;..\..\..\..\modules\imgproc\include;..\..\..\..\modules\features2d\include;..\..\..\..\modules\flann\include;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\include;..\..\..\..\modules\imgproc\include;..\..\..\..\modules\features2d\include;..\..\..\..\modules\flann\include;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\include;..\..\..\..\modules\core\include;..\..\..\..\modules\imgproc\include;..\..\..\..\modules\features2d\include;..\..\..\..\modules\flann\include;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\include;..\..\..\..\modules\core\include;..\..\..\..\modules\imgproc\include;..\..\..\..\modules\features2d\include;..\..\..\..\modules\flann\include;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\include;..\..\..\..\modules\core\include;..\..\..\..\modules\imgproc\include;..\..\..\..\modules\features2d\include;..\..\..\..\modules\flann\include;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
