@@ -97,6 +97,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <GenerateManifest>false</GenerateManifest>
     <OutDir>$(Configuration)\$(MSBuildProjectName)\</OutDir>
+    <LibraryPath>..\..\..\..\..\binWinRT\bin\Debug;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <GenerateManifest>false</GenerateManifest>
@@ -124,7 +125,7 @@
       </PrecompiledHeaderOutputFile>
       <AdditionalUsingDirectories>$(WindowsSDK_WindowsMetadata);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>..\..\..\..\..\include;..\..\..\..\..\modules\core\include;..\..\..\..\..\modules\imgproc\include;..\..\..\..\..\modules\features2d\include;..\..\..\..\..\modules\flann\include;$(ProjectDir)\..\Common;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\..\modules\core\include;..\..\..\..\..\modules\imgproc\include;..\..\..\..\..\modules\features2d\include;..\..\..\..\..\modules\flann\include;$(ProjectDir)\..\Common;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

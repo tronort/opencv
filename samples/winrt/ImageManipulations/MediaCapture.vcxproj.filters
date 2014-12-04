@@ -50,4 +50,7 @@
       <UniqueIdentifier>{392352d8-f913-4741-82cf-d8075bb6f022}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="MediaCapture_TemporaryKey.pfx" />
+  </ItemGroup>
 </Project>
