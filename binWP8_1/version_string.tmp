@@ -1,6 +1,6 @@
 "\n"
 "General configuration for OpenCV 3.0.0-dev =====================================\n"
-"  Version control:               2.4.8-3739-g8c36bc0-dirty\n"
+"  Version control:               2.4.8-3740-g9dc6419-dirty\n"
 "\n"
 "  Platform:\n"
 "    Host:                        Windows 6.2 AMD64\n"

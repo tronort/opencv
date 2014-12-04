@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="us-ascii"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -11,11 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{400AF456-D2AE-4A9C-820F-CE2A09F60AE9}</ProjectGUID>
+    <ProjectGUID>{6BDC727F-6C6B-4B21-9B4F-19B52D22D009}</ProjectGUID>
     <ApplicationType>Windows Phone</ApplicationType>
     <ApplicationTypeRevision>8.1</ApplicationTypeRevision>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
-    <AppContainerApplication>true</AppContainerApplication>    <Keyword>Win32Proj</Keyword>
+    <AppContainerApplication>true</AppContainerApplication>
+    <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>opencv_core</ProjectName>
   </PropertyGroup>
@@ -39,21 +40,24 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-    <PropertyGroup>
-      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8_1\bin\Debug\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_core.dir\Debug\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_core300d</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
-      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
-      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8_1\bin\Release\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_core.dir\Release\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_core300</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
-      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
-      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-    </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8_1\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_core.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_core300d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8_1\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_core.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_core300</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
@@ -98,10 +102,12 @@
       <ImportLibrary>D:/projects/OpenCV/MSOpencv-cmake/binWP8_1/lib/Debug/opencv_core300d.lib</ImportLibrary>
       <ProgramDataBaseFile>D:/projects/OpenCV/MSOpencv-cmake/binWP8_1/bin/Debug/opencv_core300d.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
     </Link>
     <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -148,7 +154,8 @@
       <ImportLibrary>D:/projects/OpenCV/MSOpencv-cmake/binWP8_1/lib/Release/opencv_core300.lib</ImportLibrary>
       <ProgramDataBaseFile>D:/projects/OpenCV/MSOpencv-cmake/binWP8_1/bin/Release/opencv_core300.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -289,46 +296,46 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\..\..\modules\core\src\precomp.hpp" />
     <ClInclude Include="..\..\cvconfig.h" />
     <ClInclude Include="..\..\opencv2\opencv_modules.hpp" />
-    <ClCompile Include="..\..\..\modules\core\src\algorithm.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\alloc.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\arithm.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\array.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\command_line_parser.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\convert.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\copy.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\cuda_buffer_pool.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\cuda_gpu_mat.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\cuda_host_mem.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\cuda_info.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\cuda_stream.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\datastructs.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\directx.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\drawing.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\dxt.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\glob.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\gl_core_3_1.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\lapack.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\mathfuncs.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\matmul.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\matop.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\matrix.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\ocl.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\opencl\runtime\opencl_clamdblas.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\opencl\runtime\opencl_clamdfft.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\opencl\runtime\opencl_core.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\opengl.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\out.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\parallel.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\persistence.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\rand.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\stat.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\stl.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\system.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\tables.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\types.cpp"  />
-    <ClCompile Include="..\..\..\modules\core\src\umatrix.cpp"  />
-    <ClCompile Include="opencl_kernels.cpp"  />
-    <ClCompile Include="opencv_core_pch.cpp" >
+    <ClCompile Include="..\..\..\modules\core\src\algorithm.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\alloc.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\arithm.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\array.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\command_line_parser.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\convert.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\copy.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\cuda_buffer_pool.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\cuda_gpu_mat.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\cuda_host_mem.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\cuda_info.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\cuda_stream.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\datastructs.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\directx.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\drawing.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\dxt.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\glob.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\gl_core_3_1.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\lapack.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\mathfuncs.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\matmul.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\matop.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\matrix.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\ocl.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\opencl\runtime\opencl_clamdblas.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\opencl\runtime\opencl_clamdfft.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\opencl\runtime\opencl_core.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\opengl.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\out.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\parallel.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\persistence.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\rand.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\stat.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\stl.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\system.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\tables.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\types.cpp" />
+    <ClCompile Include="..\..\..\modules\core\src\umatrix.cpp" />
+    <ClCompile Include="opencl_kernels.cpp" />
+    <ClCompile Include="opencv_core_pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/projects/OpenCV/MSOpencv-cmake/modules/core/src/precomp.hpp</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

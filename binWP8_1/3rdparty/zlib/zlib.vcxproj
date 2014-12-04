@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="us-ascii"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -11,11 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{BEE8FCC8-FB6E-41CD-94BD-67870862EC65}</ProjectGUID>
+    <ProjectGUID>{A7B441A0-6EFE-43A6-8AF2-82DDC57709B7}</ProjectGUID>
     <ApplicationType>Windows Phone</ApplicationType>
     <ApplicationTypeRevision>8.1</ApplicationTypeRevision>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
-    <AppContainerApplication>true</AppContainerApplication>    <Keyword>Win32Proj</Keyword>
+    <AppContainerApplication>true</AppContainerApplication>
+    <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>zlib</ProjectName>
   </PropertyGroup>
@@ -39,17 +40,17 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-    <PropertyGroup>
-      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8_1\3rdparty\lib\Debug\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zlib.dir\Debug\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zlibd</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8_1\3rdparty\lib\Release\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zlib.dir\Release\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zlib</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
-    </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8_1\3rdparty\lib\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zlib.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zlibd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8_1\3rdparty\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zlib.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zlib</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
@@ -162,21 +163,21 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\..\..\3rdparty\zlib\inftrees.h" />
     <ClInclude Include="..\..\..\3rdparty\zlib\trees.h" />
     <ClInclude Include="..\..\..\3rdparty\zlib\zutil.h" />
-    <ClCompile Include="..\..\..\3rdparty\zlib\adler32.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\compress.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\crc32.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\deflate.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\gzclose.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\gzlib.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\gzread.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\gzwrite.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\inflate.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\infback.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\inftrees.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\inffast.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\trees.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\uncompr.c"  />
-    <ClCompile Include="..\..\..\3rdparty\zlib\zutil.c"  />
+    <ClCompile Include="..\..\..\3rdparty\zlib\adler32.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\compress.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\crc32.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\deflate.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\gzclose.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\gzlib.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\gzread.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\gzwrite.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\inflate.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\infback.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\inftrees.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\inffast.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\trees.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\uncompr.c" />
+    <ClCompile Include="..\..\..\3rdparty\zlib\zutil.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:/projects/OpenCV/MSOpencv-cmake/binWP8_1/ZERO_CHECK.vcxproj">
