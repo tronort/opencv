@@ -1,226 +1,225 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="us-ascii"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|ARM">
-      <Configuration>Debug</Configuration>
-      <Platform>ARM</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|ARM">
-      <Configuration>Release</Configuration>
-      <Platform>ARM</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{015A92E7-9FB3-428F-99D0-9B2088C54426}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
-    <ProjectName>opencv_core</ProjectName>
-    <RootNamespace>opencv_core</RootNamespace>
-    <DefaultLanguage>en-US</DefaultLanguage>
-    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
-    <AppContainerApplication>true</AppContainerApplication>
+    <ProjectGUID>{015A92E7-9FB3-428F-99D0-9B2088C54426}</ProjectGUID>
     <ApplicationType>Windows Store</ApplicationType>
     <ApplicationTypeRevision>8.1</ApplicationTypeRevision>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>opencv_core</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWinRT\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_core.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_core300d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWinRT\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_core.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_core300</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <GenerateManifest>false</GenerateManifest>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <OutDir>$(SolutionDir)WinRT\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <GenerateManifest>false</GenerateManifest>
-    <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <OutDir>$(SolutionDir)WinRT\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <GenerateManifest>false</GenerateManifest>
-    <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <OutDir>$(SolutionDir)WinRT\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <GenerateManifest>false</GenerateManifest>
-    <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <OutDir>$(SolutionDir)WinRT\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <GenerateManifest>false</GenerateManifest>
-    <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <OutDir>$(SolutionDir)WinRT\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <GenerateManifest>false</GenerateManifest>
-    <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <OutDir>$(SolutionDir)WinRT\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\binWinRT\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src;D:\projects\OpenCV\MSOpencv-cmake\modules\core\include;D:\projects\OpenCV\MSOpencv-cmake\binWinRT;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>..\..\..\binWinRT\3rdparty\zlib;..\..\..\3rdparty\zlib;..\..\..\binWinRT\modules\core;..\..\..\modules\core\src;..\..\..\modules\core\include;..\..\..\binWinRT;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;OPENCV_NOSTL;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR="Debug";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeaderFile>precomp.hpp</PrecompiledHeaderFile>
-      <ForcedIncludeFiles>precomp.hpp</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ForcedIncludeFiles>D:/projects/OpenCV/MSOpencv-cmake/modules/core/src/precomp.hpp</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/projects/OpenCV/MSOpencv-cmake/modules/core/src/precomp.hpp</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;OPENCV_NOSTL;_VARIADIC_MAX=10;__OPENCV_BUILD=1;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;CMAKE_INTDIR="Debug";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;OPENCV_NOSTL;_VARIADIC_MAX=10;__OPENCV_BUILD=1;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\binWinRT\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src;D:\projects\OpenCV\MSOpencv-cmake\modules\core\include;D:\projects\OpenCV\MSOpencv-cmake\binWinRT;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\binWinRT\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src;D:\projects\OpenCV\MSOpencv-cmake\modules\core\include;D:\projects\OpenCV\MSOpencv-cmake\binWinRT;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
     <Link>
-      <SubSystem>Console</SubSystem>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;..\..\3rdparty\lib\Debug\zlibd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/projects/OpenCV/MSOpencv-cmake/binWinRT/lib/Debug/opencv_core300d.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/projects/OpenCV/MSOpencv-cmake/binWinRT/bin/Debug/opencv_core300d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\binWinRT\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src;D:\projects\OpenCV\MSOpencv-cmake\modules\core\include;D:\projects\OpenCV\MSOpencv-cmake\binWinRT;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>..\..\..\binWinRT\3rdparty\zlib;..\..\..\3rdparty\zlib;..\..\..\binWinRT\modules\core;..\..\..\modules\core\src;..\..\..\modules\core\include;..\..\..\binWinRT;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;OPENCV_NOSTL;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR="Release";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeaderFile>precomp.hpp</PrecompiledHeaderFile>
-      <ForcedIncludeFiles>precomp.hpp</ForcedIncludeFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4251</DisableSpecificWarnings>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm'">
-    <ClCompile>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ForcedIncludeFiles>D:/projects/OpenCV/MSOpencv-cmake/modules/core/src/precomp.hpp</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>..\..\..\binWinRT\3rdparty\zlib;..\..\..\3rdparty\zlib;..\..\..\binWinRT\modules\core;..\..\..\modules\core\src;..\..\..\modules\core\include;..\..\..\binWinRT;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;OPENCV_NOSTL;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR="Debug";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeaderFile>precomp.hpp</PrecompiledHeaderFile>
-      <ForcedIncludeFiles>precomp.hpp</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+      <PrecompiledHeaderFile>D:/projects/OpenCV/MSOpencv-cmake/modules/core/src/precomp.hpp</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;OPENCV_NOSTL;_VARIADIC_MAX=10;__OPENCV_BUILD=1;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;CMAKE_INTDIR="Release";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;OPENCV_NOSTL;_VARIADIC_MAX=10;__OPENCV_BUILD=1;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\binWinRT\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src;D:\projects\OpenCV\MSOpencv-cmake\modules\core\include;D:\projects\OpenCV\MSOpencv-cmake\binWinRT;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\binWinRT\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\3rdparty\zlib;D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src;D:\projects\OpenCV\MSOpencv-cmake\modules\core\include;D:\projects\OpenCV\MSOpencv-cmake\binWinRT;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
     <Link>
-      <SubSystem>Console</SubSystem>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;..\..\3rdparty\lib\Release\zlib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|arm'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>..\..\..\binWinRT\3rdparty\zlib;..\..\..\3rdparty\zlib;..\..\..\binWinRT\modules\core;..\..\..\modules\core\src;..\..\..\modules\core\include;..\..\..\binWinRT;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;OPENCV_NOSTL;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR="Release";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeaderFile>precomp.hpp</PrecompiledHeaderFile>
-      <ForcedIncludeFiles>precomp.hpp</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
-    </ClCompile>
-    <Link>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/projects/OpenCV/MSOpencv-cmake/binWinRT/lib/Release/opencv_core300.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/projects/OpenCV/MSOpencv-cmake/binWinRT/bin/Release/opencv_core300.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <Version>
+      </Version>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>..\..\..\binWinRT\3rdparty\zlib;..\..\..\3rdparty\zlib;..\..\..\binWinRT\modules\core;..\..\..\modules\core\src;..\..\..\modules\core\include;..\..\..\binWinRT;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;OPENCV_NOSTL;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR="Debug";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeaderFile>precomp.hpp</PrecompiledHeaderFile>
-      <ForcedIncludeFiles>precomp.hpp</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <CompileAsWinRT>false</CompileAsWinRT>
-      <AdditionalIncludeDirectories>..\..\..\binWinRT\3rdparty\zlib;..\..\..\3rdparty\zlib;..\..\..\binWinRT\modules\core;..\..\..\modules\core\src;..\..\..\modules\core\include;..\..\..\binWinRT;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;OPENCV_NOSTL;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR="Release";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeaderFile>precomp.hpp</PrecompiledHeaderFile>
-      <ForcedIncludeFiles>precomp.hpp</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
-    </Link>
-  </ItemDefinitionGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\modules\core\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/projects/OpenCV/MSOpencv-cmake/modules/core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\dev\cmake-3.1.0\bin\cmake.exe -H../../.. -B../.. --check-stamp-file D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/projects/OpenCV/MSOpencv-cmake/modules/core/CMakeLists.txt;D:\projects\OpenCV\MSOpencv-cmake\modules\core\CMakeLists.txt;D:\projects\OpenCV\MSOpencv-cmake\modules\core\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/projects/OpenCV/MSOpencv-cmake/modules/core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\dev\cmake-3.1.0\bin\cmake.exe -H../../.. -B../.. --check-stamp-file D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/projects/OpenCV/MSOpencv-cmake/modules/core/CMakeLists.txt;D:\projects\OpenCV\MSOpencv-cmake\modules\core\CMakeLists.txt;D:\projects\OpenCV\MSOpencv-cmake\modules\core\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\c8badf4b6949731424e8085f56435b5d\opencl_kernels.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating opencl_kernels.cpp, opencl_kernels.hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\dev\cmake-3.1.0\bin\cmake.exe -DMODULE_NAME="core" -DCL_DIR="D:/projects/OpenCV/MSOpencv-cmake/modules/core/src/opencl" -DOUTPUT="D:/projects/OpenCV/MSOpencv-cmake/binWinRT/modules/core/opencl_kernels.cpp" -P D:/projects/OpenCV/MSOpencv-cmake/cmake/cl2cpp.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/projects/OpenCV/MSOpencv-cmake/binWinRT/CMakeFiles/c8badf4b6949731424e8085f56435b5d/opencl_kernels.cpp.rule;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\arithm.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\convert.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\copymakeborder.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\copyset.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\flip.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\inrange.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\lut.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\meanstddev.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\minmaxloc.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\mixchannels.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\mulspectrums.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\normalize.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\reduce.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\reduce2.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\repeat.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\set_identity.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\split_merge.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\transpose.cl;D:\projects\OpenCV\MSOpencv-cmake\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core\opencl_kernels.cpp;D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core\opencl_kernels.hpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating opencl_kernels.cpp, opencl_kernels.hpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\dev\cmake-3.1.0\bin\cmake.exe -DMODULE_NAME="core" -DCL_DIR="D:/projects/OpenCV/MSOpencv-cmake/modules/core/src/opencl" -DOUTPUT="D:/projects/OpenCV/MSOpencv-cmake/binWinRT/modules/core/opencl_kernels.cpp" -P D:/projects/OpenCV/MSOpencv-cmake/cmake/cl2cpp.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/projects/OpenCV/MSOpencv-cmake/binWinRT/CMakeFiles/c8badf4b6949731424e8085f56435b5d/opencl_kernels.cpp.rule;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\arithm.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\convert.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\copymakeborder.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\copyset.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\flip.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\inrange.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\lut.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\meanstddev.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\minmaxloc.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\mixchannels.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\mulspectrums.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\normalize.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\reduce.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\reduce2.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\repeat.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\set_identity.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\split_merge.cl;D:\projects\OpenCV\MSOpencv-cmake\modules\core\src\opencl\transpose.cl;D:\projects\OpenCV\MSOpencv-cmake\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core\opencl_kernels.cpp;D:\projects\OpenCV\MSOpencv-cmake\binWinRT\modules\core\opencl_kernels.hpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\modules\core\include\opencv2\core\cuda\block.hpp" />
     <ClInclude Include="..\..\..\modules\core\include\opencv2\core\cuda\border_interpolate.hpp" />
@@ -337,17 +336,9 @@
     <ClCompile Include="opencl_kernels.cpp" />
     <ClCompile Include="opencv_core_pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/projects/OpenCV/MSOpencv-cmake/modules/core/src/precomp.hpp</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">precomp.hpp</PrecompiledHeaderFile>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">precomp.hpp</PrecompiledHeaderFile>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">precomp.hpp</PrecompiledHeaderFile>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">precomp.hpp</PrecompiledHeaderFile>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/projects/OpenCV/MSOpencv-cmake/modules/core/src/precomp.hpp</PrecompiledHeaderFile>
     </ClCompile>
     <None Include="version_string.inc" />
     <None Include="..\..\..\modules\core\src\opencl\arithm.cl" />
@@ -371,8 +362,14 @@
     <None Include="..\..\..\modules\core\src\cuda\gpu_mat.cu" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\3rdparty\zlib\zlib.vcxproj">
-      <Project>{656A658B-3EE2-4F94-8899-C65543317D01}</Project>
+    <ProjectReference Include="D:/projects/OpenCV/MSOpencv-cmake/binWinRT/ZERO_CHECK.vcxproj">
+      <Project>E5A39868-107B-4A1C-86D3-47882F96EC23</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/projects/OpenCV/MSOpencv-cmake/binWinRT/3rdparty/zlib/zlib.vcxproj">
+      <Project>EEC5D4AD-5760-4639-81BD-3A891999A9C5</Project>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
 </Project>
