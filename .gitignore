@@ -15,5 +15,4 @@ bin/
 *.stamp
 *.depend
 *.rule
-*.cmake
 *.tmp
