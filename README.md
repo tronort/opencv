@@ -1,7 +1,7 @@
 ### OpenCV: Open Source Computer Vision Library
 
-####How to build OpenCV for Windows Phone 8.1
-1. open the binWP8_1 folder
+####How to build OpenCV for Windows Phone 8.1/8.0/Windows Store
+1. open the binWP8_1 folder or another folder depending on your target platform (WinRT, WP8_1)
 2. build the opencv.sln using VS2013
 
 ####How to setup CMake GUI to build the WindowsPhone and WindowsStore Projects
@@ -60,6 +60,24 @@ Note that a single platform can be configured at a time. To build for different 
 #####6. Click on "Generate"
 
 This will generate all of the files needed to build open_cv projects for selected platform in ```opencv\bin```. Open the ```opencv\bin``` directory and open the ```OpenCV.sln```. Build all of the projects. They should build without errors.
+
+####Troubleshooting
+
+ - **Problem:** Linker error when building solution<br>
+Example: ```error LNK1104: cannot open file '..\..\lib\Debug\opencv_flann300d.lib'	D:\projects\OpenCV\MSOpencv-cmake\binWP8\modules\features2d\LINK opencv_features2d```<br>
+**Solution:** 	Go to projects’ respective ```bin*``` folders (e.g. ```inWP8_1\modules\core\```) and delete ```*.dir``` folder (e.g. ```opencv_core.dir```).<br>
+**Note:** You can also find this problem noted in the log, although the displayed error doesn’t point to it.
+
+<br>
+
+ - **Problem:** Unresolved externals when building solution<br>
+**Solution:** 	Go to ```Project Properties -> Linker -> … ``` and set
+
+  1. Ignore import library - **No**
+  1. Link Library Dependencies – **Yes**
+
+ for all OCV projects you depend on within current solution.<br> 
+ **Note:** This change persists but gets overwritten if OCV projects are regenerated with CMake.
 
 #### Resources
 
