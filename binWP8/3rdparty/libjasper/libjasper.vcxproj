@@ -1,133 +1,157 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|ARM">
-      <Configuration>Debug</Configuration>
-      <Platform>ARM</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|ARM">
-      <Configuration>Release</Configuration>
-      <Platform>ARM</Platform>
-    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7B128696-61B7-43F2-9849-4E03C973EFD4}</ProjectGuid>
-    <RootNamespace>libjasper</RootNamespace>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <ProjectGUID>{E97306BD-9451-4EA6-88CE-835790A37A50}</ProjectGUID>
+    <ApplicationType>Windows Phone</ApplicationType>
+    <ApplicationTypeRevision>8.0</ApplicationTypeRevision>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>libjasper</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110_wp80</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v110_wp80</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v110_wp80</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v110_wp80</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup>
-    <GenerateManifest>false</GenerateManifest>
-  </PropertyGroup>
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8\3rdparty\lib\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libjasper.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libjasperd</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8\3rdparty\lib\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">libjasper.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">libjasper</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
-      <AdditionalIncludeDirectories>..\..\..\3rdparty\libjasper;..\..\..\binWP8;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;_VARIADIC_MAX=10;EXCLUDE_MIF_SUPPORT;EXCLUDE_PNM_SUPPORT;EXCLUDE_BMP_SUPPORT;EXCLUDE_RAS_SUPPORT;EXCLUDE_JPG_SUPPORT;EXCLUDE_PGX_SUPPORT;JAS_WIN_MSVC_BUILD;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\3rdparty\libjasper;D:\projects\OpenCV\MSOpencv-cmake\binWP8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4013;4018;4101;4244;4267;4715</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;_VARIADIC_MAX=10;EXCLUDE_MIF_SUPPORT;EXCLUDE_PNM_SUPPORT;EXCLUDE_BMP_SUPPORT;EXCLUDE_RAS_SUPPORT;EXCLUDE_JPG_SUPPORT;EXCLUDE_PGX_SUPPORT;JAS_WIN_MSVC_BUILD;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;_VARIADIC_MAX=10;EXCLUDE_MIF_SUPPORT;EXCLUDE_PNM_SUPPORT;EXCLUDE_BMP_SUPPORT;EXCLUDE_RAS_SUPPORT;EXCLUDE_JPG_SUPPORT;EXCLUDE_PGX_SUPPORT;JAS_WIN_MSVC_BUILD;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\3rdparty\libjasper;D:\projects\OpenCV\MSOpencv-cmake\binWP8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\3rdparty\libjasper;D:\projects\OpenCV\MSOpencv-cmake\binWP8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
     <Link>
-      <SubSystem>Console</SubSystem>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
-      <AdditionalIncludeDirectories>..\..\..\3rdparty\libjasper;..\..\..\binWP8;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;_VARIADIC_MAX=10;EXCLUDE_MIF_SUPPORT;EXCLUDE_PNM_SUPPORT;EXCLUDE_BMP_SUPPORT;EXCLUDE_RAS_SUPPORT;EXCLUDE_JPG_SUPPORT;EXCLUDE_PGX_SUPPORT;JAS_WIN_MSVC_BUILD;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\3rdparty\libjasper;D:\projects\OpenCV\MSOpencv-cmake\binWP8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4013;4018;4101;4244;4267;4715</DisableSpecificWarnings>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <ClCompile>
-      <PreprocessorDefinitions>_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
-      <AdditionalIncludeDirectories>..\..\..\3rdparty\libjasper;..\..\..\binWP8;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;_VARIADIC_MAX=10;EXCLUDE_MIF_SUPPORT;EXCLUDE_PNM_SUPPORT;EXCLUDE_BMP_SUPPORT;EXCLUDE_RAS_SUPPORT;EXCLUDE_JPG_SUPPORT;EXCLUDE_PGX_SUPPORT;JAS_WIN_MSVC_BUILD;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4013;4018;4101;4244;4267;4715</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;EXCLUDE_MIF_SUPPORT;EXCLUDE_PNM_SUPPORT;EXCLUDE_BMP_SUPPORT;EXCLUDE_RAS_SUPPORT;EXCLUDE_JPG_SUPPORT;EXCLUDE_PGX_SUPPORT;JAS_WIN_MSVC_BUILD;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;EXCLUDE_MIF_SUPPORT;EXCLUDE_PNM_SUPPORT;EXCLUDE_BMP_SUPPORT;EXCLUDE_RAS_SUPPORT;EXCLUDE_JPG_SUPPORT;EXCLUDE_PGX_SUPPORT;JAS_WIN_MSVC_BUILD;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\3rdparty\libjasper;D:\projects\OpenCV\MSOpencv-cmake\binWP8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\projects\OpenCV\MSOpencv-cmake\3rdparty\libjasper;D:\projects\OpenCV\MSOpencv-cmake\binWP8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
     <Link>
-      <SubSystem>Console</SubSystem>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <ClCompile>
-      <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
-      <AdditionalIncludeDirectories>..\..\..\3rdparty\libjasper;..\..\..\binWP8;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINVER=0x0602;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=0x0602;_VARIADIC_MAX=10;EXCLUDE_MIF_SUPPORT;EXCLUDE_PNM_SUPPORT;EXCLUDE_BMP_SUPPORT;EXCLUDE_RAS_SUPPORT;EXCLUDE_JPG_SUPPORT;EXCLUDE_PGX_SUPPORT;JAS_WIN_MSVC_BUILD;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4013;4018;4101;4244;4267;4715</DisableSpecificWarnings>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Reference Include="Windows">
-      <IsWinMDFile>true</IsWinMDFile>
-    </Reference>
-    <Reference Include="platform.winmd">
-      <IsWinMDFile>true</IsWinMDFile>
-      <Private>false</Private>
-    </Reference>
+    <CustomBuild Include="..\..\..\3rdparty\libjasper\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/projects/OpenCV/MSOpencv-cmake/3rdparty/libjasper/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\dev\cmake-3.1.0\bin\cmake.exe -H../../.. -B../.. --check-stamp-file D:\projects\OpenCV\MSOpencv-cmake\binWP8\3rdparty\libjasper\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/projects/OpenCV/MSOpencv-cmake/3rdparty/libjasper/CMakeLists.txt;D:\projects\OpenCV\MSOpencv-cmake\3rdparty\libjasper\CMakeLists.txt;D:\projects\OpenCV\MSOpencv-cmake\3rdparty\libjasper\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8\3rdparty\libjasper\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/projects/OpenCV/MSOpencv-cmake/3rdparty/libjasper/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\dev\cmake-3.1.0\bin\cmake.exe -H../../.. -B../.. --check-stamp-file D:\projects\OpenCV\MSOpencv-cmake\binWP8\3rdparty\libjasper\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/projects/OpenCV/MSOpencv-cmake/3rdparty/libjasper/CMakeLists.txt;D:\projects\OpenCV\MSOpencv-cmake\3rdparty\libjasper\CMakeLists.txt;D:\projects\OpenCV\MSOpencv-cmake\3rdparty\libjasper\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\projects\OpenCV\MSOpencv-cmake\binWP8\3rdparty\libjasper\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\3rdparty\libjasper\jp2_cod.h" />
     <ClInclude Include="..\..\..\3rdparty\libjasper\jp2_dec.h" />
@@ -172,41 +196,55 @@
     <ClInclude Include="..\..\..\3rdparty\libjasper\jasper\jas_tvp.h" />
     <ClInclude Include="..\..\..\3rdparty\libjasper\jasper\jas_types.h" />
     <ClInclude Include="..\..\..\3rdparty\libjasper\jasper\jas_version.h" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_cm.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_debug.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_getopt.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_icc.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_iccdata.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_image.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_init.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_malloc.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_seq.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_stream.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_string.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_tmr.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_tvp.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_version.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jp2_cod.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jp2_dec.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jp2_enc.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_bs.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_cs.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_dec.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_enc.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_math.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_mct.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_mqcod.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_mqdec.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_mqenc.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_qmfb.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t1cod.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t1dec.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t1enc.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t2cod.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t2dec.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t2enc.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_tagtree.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_tsfb.c" />
-    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_util.c" />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_cm.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_debug.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_getopt.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_icc.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_iccdata.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_image.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_init.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_malloc.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_seq.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_stream.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_string.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_tmr.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_tvp.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jas_version.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jp2_cod.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jp2_dec.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jp2_enc.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_bs.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_cs.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_dec.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_enc.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_math.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_mct.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_mqcod.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_mqdec.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_mqenc.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_qmfb.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t1cod.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t1dec.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t1enc.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t2cod.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t2dec.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_t2enc.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_tagtree.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_tsfb.c"  />
+    <ClCompile Include="..\..\..\3rdparty\libjasper\jpc_util.c"  />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="platform.winmd">
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/projects/OpenCV/MSOpencv-cmake/binWP8/ZERO_CHECK.vcxproj">
+      <Project>B81ADAAD-8CDE-4DCE-A850-E03D271DD342</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
 </Project>
