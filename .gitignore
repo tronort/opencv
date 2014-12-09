@@ -16,3 +16,4 @@ bin/
 *.depend
 *.rule
 *.cmake
+*.tmp
