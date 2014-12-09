@@ -11,7 +11,7 @@ include(cmake/OpenCVMinDepVersions.cmake)
 if(CMAKE_GENERATOR MATCHES Xcode AND XCODE_VERSION VERSION_GREATER 4.3)
   cmake_minimum_required(VERSION 2.8.8 FATAL_ERROR)
 elseif(CMAKE_SYSTEM_NAME MATCHES WindowsPhone OR CMAKE_SYSTEM_NAME MATCHES WindowsStore)
-  #This fails on my machine
+  #Removed since CMake fails to find _fseeko() which leads to subsequent linker error 
   #cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
 else()
   cmake_minimum_required(VERSION "${MIN_VER_CMAKE}" FATAL_ERROR)
