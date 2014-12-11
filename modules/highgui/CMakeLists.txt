@@ -14,9 +14,9 @@ ocv_add_module(highgui opencv_imgproc OPTIONAL opencv_androidcamera)
 ocv_clear_vars(GRFMT_LIBS)
 
 # This module is not yet supported by WINRT
-# if(HAVE_WINRT_CX)
-#   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /ZW")
-# endif()
+if(HAVE_WINRT_CX AND NOT HAVE_WINRT)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /ZW")
+endif()
 
 if(HAVE_PNG OR HAVE_TIFF OR HAVE_OPENEXR)
   ocv_include_directories(${ZLIB_INCLUDE_DIRS})
