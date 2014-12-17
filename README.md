@@ -65,7 +65,9 @@ This will generate all of the files needed to build open_cv projects for selecte
 
  - **Problem:** Linker error when building solution<br>
 Example: ```error LNK1104: cannot open file '..\..\lib\Debug\opencv_flann300d.lib'	...\binWP8\modules\features2d\LINK opencv_features2d```<br>
-**Solution:** 	Go to projects’ respective ```bin*``` folders (e.g. in ```WP8_1\modules\core\```) and delete ```*.dir``` folder (e.g. ```opencv_core.dir```).<br>
+**Solutions:** 	
+   1. Go to projects’ respective ```bin*``` folders (e.g. in ```WP8_1\modules\core\```) and delete ```*.dir``` folder (e.g. ```opencv_core.dir```).<br>
+   2. Build only the selected project (issue source) from Visual Studio, then build the solution.
 **Note:** You can also find this problem noted in the log, although the displayed error doesn’t point to it.
 
 <br>
