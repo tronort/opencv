@@ -17,3 +17,7 @@ CMakeFiles/
 *.depend
 *.rule
 *.tmp
+*/debug
+*/CMakeFiles
+CMakeCache.txt
+*.suo
