@@ -69,7 +69,7 @@
     #define HAVE_GCD
 #endif
 
-#if defined _MSC_VER && _MSC_VER >= 1600 && !defined(WINRT)
+#if defined _MSC_VER && _MSC_VER >= 1600
     #define HAVE_CONCURRENCY
 #endif
 
@@ -207,6 +207,8 @@ static int numThreadsMax = omp_get_max_threads();
 #elif defined HAVE_GCD
 // nothing for GCD
 #elif defined HAVE_CONCURRENCY
+
+#ifndef WINRT
 class SchedPtr
 {
     Concurrency::Scheduler* sched_;
@@ -224,6 +226,8 @@ public:
     ~SchedPtr() { *this = 0; }
 };
 static SchedPtr pplScheduler;
+#endif
+
 #endif
 
 #endif // CV_PARALLEL_FRAMEWORK
@@ -274,6 +278,14 @@ void cv::parallel_for_(const cv::Range& range, const cv::ParallelLoopBody& body,
 
 #elif defined HAVE_CONCURRENCY
 
+#if defined WINRT
+
+        //long thread_id = GetCurrentThreadId();
+        //int a = concurrency::details::platform::GetCurrentThreadId(); 
+        Concurrency::parallel_for(stripeRange.start, stripeRange.end, pbody);
+
+#else
+
         if(!pplScheduler || pplScheduler->Id() == Concurrency::CurrentScheduler::Id())
         {
             Concurrency::parallel_for(stripeRange.start, stripeRange.end, pbody);
@@ -284,6 +296,8 @@ void cv::parallel_for_(const cv::Range& range, const cv::ParallelLoopBody& body,
             Concurrency::parallel_for(stripeRange.start, stripeRange.end, pbody);
             Concurrency::CurrentScheduler::Detach();
         }
+
+#endif
 
 #else
 
@@ -332,9 +346,18 @@ int cv::getNumThreads(void)
 
 #elif defined HAVE_CONCURRENCY
 
+#if defined WINRT
+
+    // Not supported in WinRT
+    return 0;
+
+#else
+
     return 1 + (pplScheduler == 0
-                ? Concurrency::CurrentScheduler::Get()->GetNumberOfVirtualProcessors()
-                : pplScheduler->GetNumberOfVirtualProcessors());
+        ? Concurrency::CurrentScheduler::Get()->GetNumberOfVirtualProcessors()
+        : pplScheduler->GetNumberOfVirtualProcessors());
+
+#endif
 
 #else
 
@@ -373,6 +396,13 @@ void cv::setNumThreads( int threads )
 
 #elif defined HAVE_CONCURRENCY
 
+#if defined WINRT
+
+    // Not supported in WinRT
+    return;
+
+#else
+
     if (threads <= 0)
     {
         pplScheduler = 0;
@@ -388,6 +418,7 @@ void cv::setNumThreads( int threads )
                        Concurrency::MinConcurrency, threads-1,
                        Concurrency::MaxConcurrency, threads-1));
     }
+#endif
 
 #endif
 }
@@ -408,7 +439,11 @@ int cv::getThreadNum(void)
 #elif defined HAVE_GCD
     return (int)(size_t)(void*)pthread_self(); // no zero-based indexing
 #elif defined HAVE_CONCURRENCY
+#if defined WINRT
+    return 0; // Not supported in WinRT
+#else
     return std::max(0, (int)Concurrency::Context::VirtualProcessorId()); // zero for master thread, unique number for others but not necessary 1,2,3,...
+#endif
 #else
     return 0;
 #endif
