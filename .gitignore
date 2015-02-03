@@ -9,7 +9,6 @@ Thumbs.db
 tags
 tegra/
 bin/
-CMakeFiles/
 *.sdf
 *.opensdf
 *.obj
@@ -21,3 +20,5 @@ CMakeFiles/
 */CMakeFiles
 CMakeCache.txt
 *.suo
+*.log
+*.tlog
