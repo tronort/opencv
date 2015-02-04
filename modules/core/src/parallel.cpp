@@ -78,7 +78,8 @@
    2. HAVE_CSTRIPES    - 3rdparty library, should be explicitly enabled
    3. HAVE_OPENMP      - integrated to compiler, should be explicitly enabled
    4. HAVE_GCD         - system wide, used automatically        (APPLE only)
-   5. HAVE_CONCURRENCY - part of runtime, used automatically    (Windows only - MSVS 10, MSVS 11)
+   5. WINRT            - system wide, used automatically        (Windows RT only)
+   6. HAVE_CONCURRENCY - part of runtime, used automatically    (Windows only - MSVS 10, MSVS 11)
 */
 
 #if defined HAVE_TBB
@@ -118,6 +119,8 @@
 #  define CV_PARALLEL_FRAMEWORK "openmp"
 #elif defined HAVE_GCD
 #  define CV_PARALLEL_FRAMEWORK "gcd"
+#elif defined HAVE_WINRT
+#  define CV_PARALLEL_FRAMEWORK "winrt-concurrency"
 #elif defined HAVE_CONCURRENCY
 #  define CV_PARALLEL_FRAMEWORK "ms-concurrency"
 #endif
@@ -179,7 +182,7 @@ namespace
         ProxyLoopBody* ptr_body = static_cast<ProxyLoopBody*>(context);
         (*ptr_body)(cv::Range((int)index, (int)index + 1));
     }
-#elif defined HAVE_CONCURRENCY
+#elif defined HAVE_WINRT || defined HAVE_CONCURRENCY
     class ProxyLoopBody : public ParallelLoopBodyWrapper
     {
     public:
@@ -206,9 +209,10 @@ static tbb::task_scheduler_init tbbScheduler(tbb::task_scheduler_init::deferred)
 static int numThreadsMax = omp_get_max_threads();
 #elif defined HAVE_GCD
 // nothing for GCD
+#elif defined WINRT
+// nothing for WINRT
 #elif defined HAVE_CONCURRENCY
 
-#ifndef WINRT
 class SchedPtr
 {
     Concurrency::Scheduler* sched_;
@@ -226,7 +230,6 @@ public:
     ~SchedPtr() { *this = 0; }
 };
 static SchedPtr pplScheduler;
-#endif
 
 #endif
 
@@ -276,15 +279,12 @@ void cv::parallel_for_(const cv::Range& range, const cv::ParallelLoopBody& body,
         dispatch_queue_t concurrent_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_apply_f(stripeRange.end - stripeRange.start, concurrent_queue, &pbody, block_function);
 
-#elif defined HAVE_CONCURRENCY
-
-#if defined WINRT
-
+#elif defined WINRT
         //long thread_id = GetCurrentThreadId();
         //int a = concurrency::details::platform::GetCurrentThreadId(); 
         Concurrency::parallel_for(stripeRange.start, stripeRange.end, pbody);
 
-#else
+#elif defined HAVE_CONCURRENCY
 
         if(!pplScheduler || pplScheduler->Id() == Concurrency::CurrentScheduler::Id())
         {
@@ -296,8 +296,6 @@ void cv::parallel_for_(const cv::Range& range, const cv::ParallelLoopBody& body,
             Concurrency::parallel_for(stripeRange.start, stripeRange.end, pbody);
             Concurrency::CurrentScheduler::Detach();
         }
-
-#endif
 
 #else
 
@@ -344,20 +342,16 @@ int cv::getNumThreads(void)
 
     return 512; // the GCD thread pool limit
 
-#elif defined HAVE_CONCURRENCY
-
-#if defined WINRT
+#elif defined WINRT
 
     // Not supported in WinRT
     return 0;
 
-#else
+#elif defined HAVE_CONCURRENCY
 
     return 1 + (pplScheduler == 0
         ? Concurrency::CurrentScheduler::Get()->GetNumberOfVirtualProcessors()
         : pplScheduler->GetNumberOfVirtualProcessors());
-
-#endif
 
 #else
 
@@ -394,14 +388,12 @@ void cv::setNumThreads( int threads )
     // unsupported
     // there is only private dispatch_queue_set_width() and only for desktop
 
-#elif defined HAVE_CONCURRENCY
-
-#if defined WINRT
+#elif defined WINRT
 
     // Not supported in WinRT
     return;
 
-#else
+#elif defined HAVE_CONCURRENCY
 
     if (threads <= 0)
     {
@@ -418,7 +410,6 @@ void cv::setNumThreads( int threads )
                        Concurrency::MinConcurrency, threads-1,
                        Concurrency::MaxConcurrency, threads-1));
     }
-#endif
 
 #endif
 }
@@ -438,12 +429,10 @@ int cv::getThreadNum(void)
     return omp_get_thread_num();
 #elif defined HAVE_GCD
     return (int)(size_t)(void*)pthread_self(); // no zero-based indexing
-#elif defined HAVE_CONCURRENCY
-#if defined WINRT
+#elif defined WINRT
     return 0; // Not supported in WinRT
-#else
+#elif defined HAVE_CONCURRENCY
     return std::max(0, (int)Concurrency::Context::VirtualProcessorId()); // zero for master thread, unique number for others but not necessary 1,2,3,...
-#endif
 #else
     return 0;
 #endif
