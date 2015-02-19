@@ -106,6 +106,8 @@
     #elif defined HAVE_GCD
         #include <dispatch/dispatch.h>
         #include <pthread.h>
+    #elif defined HAVE_WINRT
+        #include <ppltasks.h>
     #elif defined HAVE_CONCURRENCY
         #include <ppl.h>
     #endif
@@ -345,6 +347,7 @@ int cv::getNumThreads(void)
 #elif defined WINRT
 
     // Not supported in WinRT
+    // System::Threading::ThreadPool::GetMaxThreads()
     return 0;
 
 #elif defined HAVE_CONCURRENCY
