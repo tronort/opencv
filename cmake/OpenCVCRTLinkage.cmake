@@ -2,16 +2,17 @@ if(NOT MSVC)
   message(FATAL_ERROR "CRT options are available only for MSVC")
 endif()
 
-if (${CMAKE_SYSTEM_NAME} MATCHES "WindowsStore" OR ${CMAKE_SYSTEM_NAME} MATCHES "WindowsPhone")
-  set(HAVE_WINRT TRUE)
+#if (${CMAKE_SYSTEM_NAME} MATCHES "WindowsStore" OR ${CMAKE_SYSTEM_NAME} MATCHES "WindowsPhone")
+#  set(WINRT TRUE)
 
+if (WINRT)
   add_definitions(/DWINVER=_WIN32_WINNT_WIN8 /DNTDDI_VERSION=NTDDI_WIN8 /D_WIN32_WINNT=_WIN32_WINNT_WIN8)
 endif()
 
 # Removing LNK4075 warnings for debug WinRT builds
 # "LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification"
 # "LNK4075: ignoring '/INCREMENTAL' due to '/OPT:REF' specification"
-if(MSVC AND HAVE_WINRT)
+if(MSVC AND WINRT)
   # Optional verification checks since we don't know existing contents of variables below
   string(REPLACE "/OPT:ICF " "/OPT:NOICF " CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG}")
   string(REPLACE "/OPT:REF " "/OPT:NOREF " CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG}")

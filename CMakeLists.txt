@@ -44,7 +44,7 @@ if(CMAKE_SYSTEM_NAME MATCHES WindowsPhone OR CMAKE_SYSTEM_NAME MATCHES WindowsSt
 endif(CMAKE_SYSTEM_NAME MATCHES WindowsPhone OR CMAKE_SYSTEM_NAME MATCHES WindowsStore)
 
 if(WINRT)
-  add_definitions(-DHAVE_WINRT -DNO_GETENV)
+  add_definitions(-DWINRT -DNO_GETENV)
 endif()
 
 if(POLICY CMP0022)

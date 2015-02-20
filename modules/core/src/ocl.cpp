@@ -736,7 +736,7 @@ static void* initOpenCLAndLoad(const char* funcname)
     static HMODULE handle = 0;
     if (!handle)
     {
-#ifndef HAVE_WINRT
+#ifndef WINRT
         if(!initialized)
         {
             handle = LoadLibraryA("OpenCL.dll");
@@ -2239,7 +2239,7 @@ static bool parseOpenCLDeviceConfiguration(const std::string& configurationStr,
     return true;
 }
 
-#ifdef HAVE_WINRT
+#ifdef WINRT
 static cl_device_id selectOpenCLDevice()
 {
     return NULL;
