@@ -360,7 +360,7 @@ typedef PNG_CONST png_uint_16p FAR * png_const_uint_16pp;
 
 /* Memory model/platform independent fns */
 #ifndef PNG_ABORT
-#  if defined(_WINDOWS_) && !defined(HAVE_WINRT)
+#  if defined(_WINDOWS_) && !defined(WINRT)
 #    define PNG_ABORT() ExitProcess(0)
 #  else
 #    define PNG_ABORT() abort()

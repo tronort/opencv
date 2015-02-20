@@ -44,7 +44,7 @@ if(CMAKE_SYSTEM_NAME MATCHES WindowsPhone OR CMAKE_SYSTEM_NAME MATCHES WindowsSt
 endif(CMAKE_SYSTEM_NAME MATCHES WindowsPhone OR CMAKE_SYSTEM_NAME MATCHES WindowsStore)
 
 if(WINRT)
-  add_definitions(-DNO_GETENV)
+  add_definitions(-DHAVE_WINRT -DNO_GETENV)
 endif()
 
 if(POLICY CMP0022)
@@ -925,7 +925,7 @@ endif(DEFINED WITH_OPENNI)
 
 if(DEFINED WITH_OPENNI2)
   status("    OpenNI2:"		   HAVE_OPENNI2	   THEN "YES (ver ${OPENNI2_VERSION_STRING}, build ${OPENNI2_VERSION_BUILD})"
-																								   ELSE NO)
+                                                                                                   ELSE NO)
 endif(DEFINED WITH_OPENNI2)
 
 if(DEFINED WITH_PVAPI)
